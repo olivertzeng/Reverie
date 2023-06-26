@@ -28,8 +28,9 @@ struct Tweak {
                     Reverie.status = .autoSlept
                     Reverie.sleep()
                 } else if batteryLevel == Preferences.wakeLevel && (Reverie.status == .autoSlept || Reverie.status == .userSlept) {
-                    Reverie.status = .autoWoken
-                    Reverie.wake()
+                    if Preferences.wakeLevelToggle == true
+                      Reverie.status = .autoWoken
+                      Reverie.wake()
                 }
             }
             

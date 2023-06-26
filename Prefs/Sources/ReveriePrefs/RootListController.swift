@@ -20,6 +20,7 @@ final class RootListController: PSListController {
                     ToggleCell(name: "Fast Charge", key: "canFastCharge", defaultValue: true),
                     GroupCell(name: "Sleep Level", footerText: ""),
                     SliderCell(key: "sleepLevel", defaultValue: 7, range: 1 ..< 100),
+                    ToggleCell(name: "Enable Auto Wake Level", key: "wakeLevelToggle", defaultValue: true),
                     GroupCell(name: "Wake Level", footerText: ""),
                     SliderCell(key: "wakeLevel", defaultValue: 20, range: 1 ..< 100)
                 ], to: &specifiers, in: self)
